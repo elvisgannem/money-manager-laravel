@@ -5,26 +5,36 @@
 @endsection
 @section('content')
 
-    <main>
-        <section>
-            <h4>Login</h4>
-            <form method="post">
-                @csrf
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
+    <div class="background">
+        <div class="blur"></div>
+    </div>
+
+    <section class="principal-section">
+        <div class="user-circle">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <form method="post">
+            @csrf
+            <div class="input input-email">
+                <div class="input-icon">
+                    <i class="fa-solid fa-user-check"></i>
                 </div>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
 
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password">
+            <div class="input input-password">
+                <div class="input-icon">
+                    <i class="fa-solid fa-lock"></i>
                 </div>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
+            <a href="/register"><p class="create-account">or create an account</p></a>
+        </form>
 
-                <button type="submit">Login</button>
-                <a href="/register">or create an account</a>
 
-            </form>
-        </section>
 
-    </main>
+    </section>
+
 @endsection
