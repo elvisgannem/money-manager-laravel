@@ -1,0 +1,74 @@
+main {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+main section {
+    width: 25%;
+    border-radius: 0.2rem;
+}
+
+main section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+}
+
+main section a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+main section div button {
+    outline: none;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background: transparent;
+    color: #FFF;
+    font-size: 1.3rem;
+}
+
+.expenses-section {
+    padding: 0.5rem 1rem;
+    background: #FF6B6B;
+}
+
+.incomes-section {
+    padding: 0.5rem 1rem;
+    background: #6BCB77;
+}
+
+.amounts-content {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.amounts-content div {
+    display: flex;
+    width: 100%;
+}
+
+header {
+    padding: 0.8rem;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.positive-balance {
+    background: #6BCB77;
+}
+
+.negative-balance {
+    background: #FF6B6B;
+}

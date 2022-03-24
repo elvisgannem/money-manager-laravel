@@ -1,0 +1,44 @@
+main {
+    padding: 3rem;
+}
+
+section {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form div, form button {
+    width: 30%;
+}
+
+form div input, form button {
+    height: 25px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form button {
+    outline: none;
+    border: 1px solid #44b450;
+    background: #6BCB77;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    color: #FFF;
+    height: 30px;
+    cursor: pointer;
+}
+
+form button:hover {
+    transition: 0.3s;
+    background: transparent;
+    color: #6BCB77;
+}
