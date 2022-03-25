@@ -11,9 +11,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     background: #3d3d3d;
     color: #FFF;
+    height: 6vh;
+    padding: 0 1rem;
 }
 
 nav i {
@@ -32,4 +33,23 @@ a {
 
 .login {
     color: #6BCB77;
+}
+
+.background {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1, 1, 140, 0.89) 71%, rgba(60, 21, 168, 0.97) 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 94vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 94vh;
+    width: 100%;
 }

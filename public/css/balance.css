@@ -31,25 +31,28 @@ main section div button {
     background: transparent;
     color: #FFF;
     font-size: 1.3rem;
+    position: relative;
+    bottom: 5rem;
 }
 
 .expenses-section {
     padding: 0.5rem 1rem;
-    background: #FF6B6B;
+    background: #3d3d3d;
 }
 
 .incomes-section {
     padding: 0.5rem 1rem;
-    background: #6BCB77;
+    background: #3d3d3d;
 }
 
 .amounts-content {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.8rem;
+    position: relative;
+    bottom: 1rem;
 }
 
 .amounts-content div {
@@ -72,3 +75,33 @@ header {
 .negative-balance {
     background: #FF6B6B;
 }
+
+.incomes-icon {
+    background: #6BCB77;
+    width: 20%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+    bottom: 2.5rem;
+}
+
+.expenses-icon {
+    background: #FF6B6B;
+    width: 20%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    border-radius: 4rem;
+    bottom: 2.5rem;
+}
+
+.incomes-icon i, .expenses-icon i {
+    font-size: 3rem;
+    color: #FFF;
+}
+

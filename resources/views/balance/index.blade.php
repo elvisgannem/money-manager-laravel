@@ -5,19 +5,25 @@
 
 @section('content')
 
-    <header class="
-        @if($balance > 0)
-            positive-balance
-        @else
-            negative-balance
-        @endif">
-        Your balance is {{ $balance }}
-    </header>
+    @if(count($incomes) + count($expenses) > 0)
+        <header class="
+            @if($balance > 0)
+                positive-balance
+            @else
+                negative-balance
+            @endif">
+            Your balance is {{ $balance }}
+        </header>
+    @endif
 
     <main>
         <section class="incomes-section">
+            <div class="incomes-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+
             <div>
-                <h3>Incomes</h3>
+{{--                <h3>Incomes</h3>--}}
                 <button>
                     <a href="/incomes/create"><i class="fa-solid fa-plus"></i></a>
                 </button>
@@ -30,12 +36,15 @@
                     </div>
                 @endforeach
             </div>
-
         </section>
 
         <section class="expenses-section">
+            <div class="expenses-icon">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+            </div>
+
             <div>
-                <h3>Expenses</h3>
+{{--                <h3>Expenses</h3>--}}
                 <button>
                     <a href="/expenses/create"><i class="fa-solid fa-plus"></i></a>
                 </button>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use App\Models\Income;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class BalanceController extends Controller

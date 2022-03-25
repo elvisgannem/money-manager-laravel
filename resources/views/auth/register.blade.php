@@ -5,10 +5,6 @@
 @endsection
 @section('content')
 
-    <div class="background">
-        <div class="blur"></div>
-    </div>
-
     <section class="principal-section">
         <div class="user-circle">
             <i class="fa-solid fa-user"></i>

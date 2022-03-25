@@ -8,18 +8,18 @@
 
 <main>
     <section>
-        <h2>{{ $title }}</h2>
         <form action="{{ $actionUrl }}" method="post">
             @csrf
-            <div>
-                <label for="description">Description:</label>
-                <input type="text" name="description" id="description" required>
+            <div class="form__div">
+                <i class="fa-solid fa-comment-dots"></i>
+                <input type="text" name="description" id="description" required placeholder="Description">
             </div>
-            <div>
-                <label for="amount">Amount:</label>
-                <input type="number" name="amount" id="amount" required>
+
+            <div class="form__div">
+                <i class="fa-solid fa-money-bill"></i>
+                <input type="number" name="amount" id="amount" required placeholder="Amount">
             </div>
-            <button>Add Income</button>
+            <button>{{ $title }}</button>
         </form>
     </section>
 </main>

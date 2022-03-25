@@ -22,6 +22,10 @@
     @endif
 </nav>
 
+<div class="background">
+    <div class="blur"></div>
+</div>
+
 @yield('content')
 
 <script src="https://kit.fontawesome.com/be5a9998b5.js" crossorigin="anonymous"></script>
