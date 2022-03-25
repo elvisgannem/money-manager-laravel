@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\ExpenseCreator;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ExpensesController extends Controller
@@ -31,7 +32,8 @@ class ExpensesController extends Controller
 
         $income = $incomeCreator->createExpense(
             $request->description,
-            $request->amount
+            $request->amount,
+            Auth::user()->id
         );
 
         return redirect('/');

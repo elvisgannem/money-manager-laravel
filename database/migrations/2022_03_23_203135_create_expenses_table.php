@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('expenses', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('description');
             $table->float('amount');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
