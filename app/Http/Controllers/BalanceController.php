@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use App\Models\Income;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class BalanceController extends Controller
@@ -17,8 +18,13 @@ class BalanceController extends Controller
 
     public function index(): View
     {
-        $incomes = Income::query()->orderBy('description')->get();
-        $expenses = Expense::query()->orderBy('description')->get();
+        $user_id = Auth::user()->id;
+        $incomes = Income::where('user_id', $user_id)
+            ->orderBy('description')
+            ->get();
+        $expenses = Expense::where('user_id', $user_id)
+            ->orderBy('description')
+            ->get();
 
         $balance = $this->getBalance($incomes, $expenses);
 
