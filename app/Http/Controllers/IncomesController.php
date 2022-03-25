@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\IncomeCreator;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class IncomesController extends Controller
@@ -31,7 +32,8 @@ class IncomesController extends Controller
 
         $income = $incomeCreator->createIncome(
             $request->description,
-            $request->amount
+            $request->amount,
+            Auth::user()->id
         );
 
         return redirect('/');

@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Income extends Model
 {
     use HasFactory;
-    protected $fillable = ['description', 'amount'];
+    protected $fillable = ['user_id', 'description', 'amount'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
