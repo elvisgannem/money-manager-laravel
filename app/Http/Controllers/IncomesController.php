@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\IncomeCreator;
+use App\Services\IncomeDestroy;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,5 +38,10 @@ class IncomesController extends Controller
         );
 
         return redirect('/');
+    }
+
+    public function destroy(Request $request, IncomeDestroy $incomeDestroy): bool
+    {
+        return $incomeDestroy->destroyIncome($request->id);
     }
 }

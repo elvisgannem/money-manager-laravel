@@ -24,9 +24,11 @@ Route::get('/', [BalanceController::class, 'index']);
 
 Route::get('/incomes/create', [IncomesController::class, 'create']);
 Route::post('/incomes/create', [IncomesController::class, 'store']);
+Route::post('/incomes/delete', [IncomesController::class, 'destroy']);
 
 Route::get('/expenses/create', [ExpensesController::class, 'create']);
 Route::post('/expenses/create', [ExpensesController::class, 'store']);
+Route::post('/expenses/delete', [ExpensesController::class, 'destroy']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);

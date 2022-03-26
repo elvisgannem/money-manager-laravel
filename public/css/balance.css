@@ -105,3 +105,6 @@ header {
     color: #FFF;
 }
 
+.fa-trash {
+    cursor: pointer;
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\ExpenseCreator;
+use App\Services\ExpenseDestroy;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,5 +38,10 @@ class ExpensesController extends Controller
         );
 
         return redirect('/');
+    }
+
+    public function destroy(Request $request, ExpenseDestroy $expenseDestroy): bool
+    {
+        return $expenseDestroy->destroyExpense($request->id);
     }
 }

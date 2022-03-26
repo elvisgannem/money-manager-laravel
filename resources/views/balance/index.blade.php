@@ -2,6 +2,7 @@
 @section('stylesheet')
     <link rel="stylesheet" href="{{ asset('/css/balance.css') }}">
 @endsection
+<script defer src="{{ asset('js/delete-balance.js') }}"></script>
 
 @section('content')
 
@@ -23,7 +24,6 @@
             </div>
 
             <div>
-{{--                <h3>Incomes</h3>--}}
                 <button>
                     <a href="/incomes/create"><i class="fa-solid fa-plus"></i></a>
                 </button>
@@ -32,6 +32,11 @@
             <div class="amounts-content">
                 @foreach($incomes as $income)
                     <div>
+                        <form>
+                            @csrf
+                            <i class="fa-solid fa-trash" onclick="deleteOperation({{ $income->id }}, 'incomes')"></i>
+                        </form>
+
                         <p>{{ $income['description'] }}</p><strong>{{ $income['amount'] }}</strong>
                     </div>
                 @endforeach
@@ -44,7 +49,6 @@
             </div>
 
             <div>
-{{--                <h3>Expenses</h3>--}}
                 <button>
                     <a href="/expenses/create"><i class="fa-solid fa-plus"></i></a>
                 </button>
@@ -53,7 +57,11 @@
             <div class="amounts-content">
                 @foreach($expenses as $expense)
                     <div>
-                        <p>{{ $expense['description'] }}</p><strong>{{ $expense['amount'] }}</strong>
+                        <form>
+                            @csrf
+                            <i class="fa-solid fa-trash" onclick="deleteOperation( {{ $expense->id }}, 'expenses')"></i>
+                        </form>
+                        <p style="text-align: left">{{ $expense['description'] }}</p><strong>{{ $expense['amount'] }}</strong>
                     </div>
                 @endforeach
             </div>
