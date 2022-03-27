@@ -108,3 +108,55 @@ header {
 .fa-trash {
     cursor: pointer;
 }
+
+.bg-modal-destroy {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-destroy {
+    position: absolute;
+    background: rgba(61, 61, 61, 0.63);
+    width: 20%;
+    height: 10%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+}
+
+.modal-destroy h3 {
+    color: #FFF;
+}
+
+.modal-destroy div button {
+    outline: none;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.modal-destroy div {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.confirm-button {
+    background: #6BCB77;
+}
+
+.cancel-button {
+    background: #FF6B6B;
+}
+
+.blur-background {
+    -webkit-filter: blur(5px) grayscale(50%);
+}
+
+.hidden {
+    display: none;
+}

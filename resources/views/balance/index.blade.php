@@ -68,4 +68,15 @@
         </section>
     </main>
 
+    <section class="bg-modal-destroy hidden">
+        <div class="modal-destroy">
+            <h3>Are you sure?</h3>
+            <div>
+                <button class="confirm-button">Confirm</button>
+                <button class="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+
 @endsection
