@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-    <section class="principal-section">
+    <section class="principal-section animate__animated animate__fadeInDown">
         <div class="user-circle">
             <i class="fa-solid fa-user"></i>
         </div>

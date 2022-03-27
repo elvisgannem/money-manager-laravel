@@ -6,7 +6,7 @@
 
 @section('content')
 
-<main>
+<main class="animate__animated animate__fadeIn">
     <section>
         <form action="{{ $actionUrl }}" method="post">
             @csrf

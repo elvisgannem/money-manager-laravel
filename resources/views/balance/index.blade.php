@@ -17,7 +17,7 @@
         </header>
     @endif
 
-    <main>
+    <main class="animate__animated animate__fadeInDown">
         <section class="incomes-section">
             <div class="incomes-icon">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
