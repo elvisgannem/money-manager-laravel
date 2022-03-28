@@ -160,3 +160,20 @@ header {
 .hidden {
     display: none;
 }
+
+.month-view {
+    padding: 1rem;
+}
+
+#month-select {
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    outline: none;
+}
+
+#month-select option {
+    color: #000;
+}

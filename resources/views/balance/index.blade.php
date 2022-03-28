@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('/css/balance.css') }}">
 @endsection
 <script defer src="{{ asset('js/delete-balance.js') }}"></script>
+<script defer src="{{ asset('js/change-month.js') }}"></script>
 
 @section('content')
 
@@ -17,7 +18,18 @@
         </header>
     @endif
 
+    <section class="month-view">
+        <form method="post">
+            @csrf
+            <select name="month-select" id="month-select" onchange="changeMonth(this)">
+                <option value="3">March</option>
+                <option value="4">April</option>
+            </select>
+        </form>
+    </section>
+
     <main class="animate__animated animate__fadeInDown">
+
         <section class="incomes-section">
             <div class="incomes-icon">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
