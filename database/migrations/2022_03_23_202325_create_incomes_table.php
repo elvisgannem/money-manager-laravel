@@ -18,8 +18,10 @@ return new class extends Migration
             $table->integer('user_id');
             $table->string('description');
             $table->float('amount');
+            $table->integer('month');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('month')->references('id')->on('months');
         });
     }
 
