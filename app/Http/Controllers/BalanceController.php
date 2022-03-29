@@ -32,9 +32,6 @@ class BalanceController extends Controller
             ->get();
 
         $balance = $this->getBalance($incomes, $expenses);
-
-//        $months = [['month' => 'March', 'urlNumber' => 3], ['month' => 'April', 'urlNumber' => 4]];
-
         $months = $this->getMonths();
 
         return view('balance.index', compact('incomes', 'expenses', 'balance', 'months', 'months'));
@@ -53,7 +50,7 @@ class BalanceController extends Controller
         return $balance;
     }
 
-    private function getMonths()
+    private function getMonths(): \Illuminate\Support\Collection
     {
         $incomes = DB::table('incomes')
             ->join('months', 'incomes.month', '=', 'months.id')
