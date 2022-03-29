@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BalanceController;
 use App\Http\Controllers\ExpensesController;
+use App\Http\Controllers\HistoricalController;
 use App\Http\Controllers\IncomesController;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,8 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/register', [RegisterController::class, 'create']);
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/historical/{id}', [HistoricalController::class, 'index']);
 
 Route::get('/logout', function(): RedirectResponse {
     Auth::logout();

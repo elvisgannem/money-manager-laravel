@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Income extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id', 'description', 'amount'];
+    protected $fillable = ['user_id', 'description', 'amount', 'month'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function month()
+    {
+        return $this->hasOne(Months::class);
     }
 }

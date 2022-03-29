@@ -177,3 +177,15 @@ header {
 #month-select option {
     color: #000;
 }
+
+.go-back {
+    padding: 1rem;
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+.go-back a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

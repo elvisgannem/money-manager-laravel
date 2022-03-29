@@ -34,7 +34,8 @@ class ExpensesController extends Controller
         $income = $incomeCreator->createExpense(
             $request->description,
             $request->amount,
-            Auth::user()->id
+            Auth::user()->id,
+            date('n')
         );
 
         return redirect('/');

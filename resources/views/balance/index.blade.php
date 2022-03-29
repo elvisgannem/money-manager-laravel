@@ -18,15 +18,18 @@
         </header>
     @endif
 
-    <section class="month-view">
-        <form method="post">
-            @csrf
-            <select name="month-select" id="month-select" onchange="changeMonth(this)">
-                <option value="3">March</option>
-                <option value="4">April</option>
-            </select>
-        </form>
-    </section>
+    @if(count($months) > 0)
+        <section class="month-view">
+            <form method="post">
+                @csrf
+                <select name="month-select" id="month-select" onchange="changeMonth(this)">
+                    @foreach($months as $month)
+                        <option value="{{ $month->id }}">{{ $month->month }}</option>
+                    @endforeach
+                </select>
+            </form>
+        </section>
+    @endif
 
     <main class="animate__animated animate__fadeInDown">
 
@@ -35,7 +38,7 @@
                 <i class="fa-solid fa-hand-holding-dollar"></i>
             </div>
 
-            <div>
+            <div class="add-container">
                 <button>
                     <a href="/incomes/create"><i class="fa-solid fa-plus"></i></a>
                 </button>
@@ -43,7 +46,7 @@
 
             <div class="amounts-content">
                 @foreach($incomes as $income)
-                    <div>
+                    <div class="income-container">
                         <form>
                             @csrf
                             <i class="fa-solid fa-trash" onclick="deleteOperation({{ $income->id }}, 'incomes')"></i>
@@ -73,7 +76,7 @@
                             @csrf
                             <i class="fa-solid fa-trash" onclick="deleteOperation( {{ $expense->id }}, 'expenses')"></i>
                         </form>
-                        <p style="text-align: left">{{ $expense['description'] }}</p><strong>{{ $expense['amount'] }}</strong>
+                        <p>{{ $expense['description'] }}</p><strong>{{ $expense['amount'] }}</strong>
                     </div>
                 @endforeach
             </div>

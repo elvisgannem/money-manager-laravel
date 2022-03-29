@@ -34,7 +34,8 @@ class IncomesController extends Controller
         $income = $incomeCreator->createIncome(
             $request->description,
             $request->amount,
-            Auth::user()->id
+            Auth::user()->id,
+            date('n')
         );
 
         return redirect('/');

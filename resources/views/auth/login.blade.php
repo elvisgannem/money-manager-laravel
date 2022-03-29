@@ -28,9 +28,6 @@
             <button type="submit" class="login-btn">LOGIN</button>
             <a href="/register"><p class="create-account">or create an account</p></a>
         </form>
-
-
-
     </section>
 
 @endsection
